@@ -1,4 +1,4 @@
-export interface Images {
+export interface Image {
   id: string;
   urls: {
     small: string;
@@ -11,9 +11,9 @@ export interface Images {
 }
 
 export interface FetchImagesResponse {
-  results: Images[];
+  results: Image[];
   total: number;
   total_pages: number;
 }
 
-export type OnImageClick = (image: Images) => void;
+export type OnImageClick = (image: Image) => void;

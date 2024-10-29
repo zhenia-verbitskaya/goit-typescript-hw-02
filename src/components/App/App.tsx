@@ -5,18 +5,18 @@ import ImageModal from "../ImageModal/ImageModal";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import Loader from "../Loader/Loader";
 import { fetchImages } from "../../services/api";
-import { Images } from "../../types";
+import { Image } from "../../types";
 import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 function App() {
-  const [images, setImages] = useState<Images[]>([]);
+  const [images, setImages] = useState<Image[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
   const [page, setPage] = useState<number>(1);
   const [query, setQuery] = useState<string>("");
   const [totalPages, setTotalPages] = useState<number>(0);
-  const [selectedImage, setSelectedImage] = useState<Images | null>(null);
+  const [selectedImage, setSelectedImage] = useState<Image | null>(null);
 
   useEffect(() => {
     if (!query) return;
@@ -61,7 +61,7 @@ function App() {
     }
   };
 
-  const openModal = (image: Images) => {
+  const openModal = (image: Image) => {
     setSelectedImage(image);
   };
 

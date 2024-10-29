@@ -1,8 +1,8 @@
-import { Images, OnImageClick } from "../../types";
+import { Image, OnImageClick } from "../../types";
 import s from "./ImageCard.module.css";
 
 export interface ImageCardProps {
-  image: Images;
+  image: Image;
   onImageClick: OnImageClick;
 }
 
